@@ -1,0 +1,305 @@
+
+/* ----------------------- elementos iniciales ---------------------------------- */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #19151a;
+}
+
+a {
+    font-family: "Kanit", sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Boton de regreso */
+
+.image-button {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+}
+
+.image-button button {
+    background-color: #5a49a3;
+    padding: 0px;
+    border: 0px;
+    border-radius: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    transition: background 0.3s ease;
+    
+    img{
+        width: 100%;
+        height: 100%;
+        margin-right: 10px; 
+    };
+}
+
+.image-button button:hover {
+    background-color: #3f3f3f;
+}
+
+/* ----------------------- Header ---------------------------------- */
+
+header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "title list";
+    background-image: url("../Recursos/8275354.jpg");
+    background-size: 100%;
+    padding: 20px;
+    box-shadow: 0px 0px 100px black inset;
+}
+
+h1 {
+    max-width: 800px;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    margin: auto;
+    color: #ffffff;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 5px 8px 15px black;
+    grid-area: title;
+}
+
+nav {
+    max-width: 300px;
+    padding-left: 20px;
+    grid-area: list;
+
+    button{
+        background-color: rgba(0, 0, 0, 0);
+        font-family: "Kanit", sans-serif;
+        border: none;
+        color: white;
+        padding: 15px;
+        margin: 0px;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    content: none;
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    border-radius: 25px;
+    margin: 15px 0;
+    padding: 0px;
+    transition: background 0.3s ease;
+}
+
+ul li:hover {
+    background: #f0f8ff;
+    button{
+        color: #333;
+    }
+}
+
+/* ----------------------- Main ---------------------------------- */
+
+main {
+    max-width: 1600px;
+    margin: auto;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-align: justify;
+}
+
+img {
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+
+
+
+/* ----------------- Introduccion ---------------- */
+
+.intro {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "p image";
+    background-color: #17131a;
+    color: #ffffff;
+    padding: 20px;
+
+    a{
+        color: #ffffff;
+    }
+}
+
+.grid_p {
+    grid-area: p;
+}
+
+.grid_img {
+    padding-left: 50px;
+    grid-area: image;
+}
+
+/* ----------------- Descripcion/que es ---------------- */
+
+.descDiv {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "l r";
+
+    a{
+        color: #333;
+    }
+}
+
+.lua {
+    background-color: #ffffff;
+    padding: 30px;
+    grid-area: l;
+}
+
+.roblox {
+    background-color: #f1f1f1;
+    padding: 30px;
+    grid-area: r;
+}
+
+/* ----------------- evolucion ---------------- */
+
+.evolDiv{
+    color: #f1f1f1;
+    h2{
+        background-color: #4800a7;
+        margin: 0px;
+        padding-top: 80px;
+        padding-bottom: 50px;
+        text-align: center;
+        font-size: 40px;
+        text-shadow: 10px 8px 15px black;
+    }
+
+    h3{
+        font-family: "Cabin", sans-serif;
+        padding-bottom: 30px;
+        font-size: 30px;
+    }
+}
+
+.beginR{
+    padding: 80px 50px;
+    background-color: #17131a;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "v p";
+    align-items: center;
+}
+
+.currentR{
+    padding: 80px 50px;
+    background-color: #231f27;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "p v";
+    align-items: center;
+}
+
+.grid_p2 {
+    grid-area: p;
+    margin: 0 50px;
+}
+
+.grid_v{
+    width: 100%;
+    height: 360px;
+    grid-area: v;
+}
+
+/* ----------------- conclusion/ref ---------------- */
+
+.endingDiv {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "concl ref";
+    margin: 0px;
+    background-color: #f1f1f1;
+    a{
+        color: #333;
+    }
+}
+
+.conclusion {
+    background-color: #ffffff;
+    padding: 30px;
+    grid-area: concl;
+}
+
+.ref {
+    padding: 30px;
+    grid-area: ref;
+    /* a {
+        color: #19151a;
+    } */
+}
+
+/* ----------------------- Footer ---------------------------------- */
+
+footer {
+    width: 100%;
+    margin: 0px;
+    background-color: #3e008f;
+}
+
+.footerDiv {
+    max-width: 1500px;
+    margin: auto;
+}
+
+.robloxLink {
+    font-family: "Kanit", sans-serif;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #ffb3b3;
+    font-size: 20px;
+    a{
+        color: #ffffff;
+        font-size: 20px;
+    }
+}
+
+.rights {
+    font-family:"Kanit", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
